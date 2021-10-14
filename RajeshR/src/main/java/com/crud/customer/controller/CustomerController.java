@@ -18,38 +18,38 @@ import com.crud.customer.service.CustomerService;
 
 @RestController
 public class CustomerController {
-	
-	@Autowired
-	private CustomerService customerService;
-	
-	
-	@GetMapping("/customers")
-	public List<Customer> getAllCustomers() {
-		return customerService.getAllCustomer();
-		
-	}
 
-	@GetMapping("/customer/{id}")
-	public Optional<Customer> getCustomer(@PathVariable Integer id) {
-		return customerService.getCustomer(id);
-		
-	}
-	
-      @PutMapping("/customer/{id}")
-      public CustomerDto updateCustomer(@RequestBody CustomerDto customerdto) {
-	     return customerService.saveCustomer(customerdto);
-	}
-	
-	@PostMapping("/customers")
-	public List<CustomerDto> saveCustomer(@RequestBody List<CustomerDto> customerDto ) {
-		return customerService.saveListOfCustomers(customerDto);
-		
-	}
-	
-	@DeleteMapping("/customer/{id}")
-	public void deleteCustomer(@PathVariable Integer id) {
-		customerService.deleteCustomer(id);
-	}
-	
-	
+    @Autowired
+    private CustomerService customerService;
+
+
+    @GetMapping("/customer-details")
+    public List<Customer> getAllCustomers() {
+        return customerService.getAllCustomer();
+
+    }
+
+    @GetMapping("/customer-detail/{id}")
+    public Optional<Customer> getCustomer(@PathVariable Integer id) {
+        return customerService.getCustomer(id);
+
+    }
+
+    @PutMapping("/customer-detail/{id}")
+    public CustomerDto updateCustomer(@RequestBody CustomerDto customerdto) {
+        return customerService.saveCustomer(customerdto);
+    }
+
+    @PostMapping("/customer-details")
+    public List<CustomerDto> saveCustomer(@RequestBody List<CustomerDto> customerDto) {
+        return customerService.saveListOfCustomers(customerDto);
+
+    }
+
+    @DeleteMapping("/customer-detail/{id}")
+    public void deleteCustomer(@PathVariable Integer id) {
+        customerService.deleteCustomer(id);
+    }
+
+
 }

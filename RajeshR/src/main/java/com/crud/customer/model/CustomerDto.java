@@ -1,68 +1,65 @@
 package com.crud.customer.model;
 
 public class CustomerDto {
-	
-	private Integer id;
-	private String name;
-	private String city;
-	private String address;
-	
-	
-	
-	public CustomerDto() {
-		
-	}
+
+    private Integer id;
+    private String name;
+    private String city;
+    private String address;
 
 
-	public CustomerDto(Integer id, String name, String city, String address) {
-		super();
-		this.id = id;
-		this.name = name;
-		this.city = city;
-		this.address = address;
-	}
+    public CustomerDto() {
+
+    }
 
 
-	public Integer getId() {
-		return id;
-	}
+    public CustomerDto(Integer id, String name, String city, String address) {
+        super();
+        this.id = id;
+        this.name = name;
+        this.city = city;
+        this.address = address;
+    }
 
 
-	public void setId(Integer id) {
-		this.id = id;
-	}
+    public Integer getId() {
+        return id;
+    }
 
 
-	public String getName() {
-		return name;
-	}
+    public void setId(Integer id) {
+        this.id = id;
+    }
 
 
-	public void setName(String name) {
-		this.name = name;
-	}
+    public String getName() {
+        return name;
+    }
 
 
-	public String getCity() {
-		return city;
-	}
+    public void setName(String name) {
+        this.name = name;
+    }
 
 
-	public void setCity(String city) {
-		this.city = city;
-	}
+    public String getCity() {
+        return city;
+    }
 
 
-	public String getAddress() {
-		return address;
-	}
+    public void setCity(String city) {
+        this.city = city;
+    }
 
 
-	public void setAddress(String address) {
-		this.address = address;
-	}
-	
-	
-	
+    public String getAddress() {
+        return address;
+    }
+
+
+    public void setAddress(String address) {
+        this.address = address;
+    }
+
 
 }

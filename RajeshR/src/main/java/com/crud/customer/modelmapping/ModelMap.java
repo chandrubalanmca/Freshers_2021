@@ -8,17 +8,18 @@ import com.crud.customer.model.CustomerDto;
 
 @Component
 public class ModelMap {
-	
-	
-	ModelMapper modelMapper = new ModelMapper();
-	public Customer customerDtotoCustomer(CustomerDto customerDto) {
-		Customer customer = modelMapper.map(customerDto,Customer.class);
-		return customer;
-	}
-	
-	public CustomerDto customertoCustomerDto(Customer customer) {
-		CustomerDto customerDto = modelMapper.map(customer,CustomerDto.class);
-		return customerDto;
-	}
+
+
+    ModelMapper modelMapper = new ModelMapper();
+
+    public Customer customerDtotoCustomer(CustomerDto customerDto) {
+        Customer customer = modelMapper.map(customerDto, Customer.class);
+        return customer;
+    }
+
+    public CustomerDto customertoCustomerDto(Customer customer) {
+        CustomerDto customerDto = modelMapper.map(customer, CustomerDto.class);
+        return customerDto;
+    }
 
 }
