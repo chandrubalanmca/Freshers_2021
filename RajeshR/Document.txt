@@ -1,0 +1,23 @@
+Controller :
+In controller we will go to the updating details url . 
+We create a method updateAgentDetails and send @requestbody parameter as AgentInfoRequest  dto then we return getsuccessresponse method from base controller and call the updateAgentDetails method in AgentService using agentinforequest as parameter. 
+And we to service now view that method in service
+
+Service :
+Now in service we create method for updateAgentDetails and return type is string. We pass input parameter as AgentInfoRequest  dto. Now we use agents entity as reference and call the agentvalidationserive in that getAgentById method is called using AgentInfoRequest as parameter and store it in agents . In validation class there is method with agent entity return type and there is method
+GetAgentById. In that method we are using agent entity reference and storing the method from agentsRepository.findById in reference variable agentoptional and parameter as agentId.
+Now we use if condition if agentoptional is not present means it give logger error and throw exception 
+Else we will store the details in agent by agentsOptional.get() method and return agents.
+We mapper to convert agents to agent response dto and store it in agents.
+We use agent repository and use save method to save the details of agent entity. And return string message as message updated successfully.
+
+View:
+We created agentinforequest dto to  get the details from user and use it in service for input agruments.
+We created APIResponse to get the response from the user. 
+
+Repository:
+Agent repository extends JPA repository  and include agent entity to it.
+We call the save method in service using agent repository and save the details in database .
+
+Entity:
+We created all the fields that are required for the agents
