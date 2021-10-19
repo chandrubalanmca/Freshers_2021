@@ -1,0 +1,27 @@
+    Controller
+	
+    • (agent/save) URL will go to saveAgentsDetails method in controller.
+    • In that we are getting user input as AgentInfoRequest from body
+    • Then it will move to service as passing that Agent Info as parameter.
+    • Return type of the method is API Response which is a class to send the response data.
+    • After getting Response from service, Base Controller returns API response according to the return types.
+
+    Service
+	
+    • First it is validating the given input with the repository whether the details are present or not.
+    • In validation class it will throw exception if the info already presents in the database.
+    • If not present, created new reference of agent entity and mapping the request Info to entity.
+    • Saved the values in database and returning a success message.
+
+    View
+	
+    • AgentInfoRequest class to get the list of inputs from the user and @JsonFormat annotation is used to specify the date format
+    • In Api response there are some attributes to return the data or error message to the user.
+
+    Repository
+	
+    • In Agents Repository created a method to get the agent details by applicant Id.
+
+
+
+
