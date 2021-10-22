@@ -6,7 +6,7 @@ import java.util.List;
 public class AutoSuggest {
     private Name[] nodes;
     private String temp;
-    protected final int alphabets = 26;
+    private final int alphabets = 26;
     private List<String> names = new ArrayList<>();
     private StringBuffer name = new StringBuffer();
 
