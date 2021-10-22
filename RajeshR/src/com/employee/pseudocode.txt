@@ -1,0 +1,83 @@
+    
+create the class of searchData{
+            use map it stores key as character and value as searchData as assign both in the employee
+             create char as c
+             boolean as isword
+}
+
+create constructor of searchData and give character c argument {
+    to call the constructor from class
+    this.c = c
+    create any empty hash map with employee connect with map
+}
+     
+create another constructor of searchData
+ employee should connect with map
+
+create void insert method of string word{
+  if (word null or empty)
+ return;
+ char firstchar = word.charAt(0);
+ storing the firstChar to specific key is mapped to the emp
+if emp contains no mapping for the key
+   then the new key value of firstChar will store in emp
+   inserting the key firstChar and value emp to employee map
+
+if word.length()>1
+  then the second letter will be inserted into emp 
+
+else emp value is true 
+
+consider searchData as root
+
+create another constructor that contains list of string words{
+     create a method for searchData and reference as root 
+ for each loop foe each word until all words
+ then insert the word into root
+
+}
+
+void suggestHelper method parameters contains (searchData as root, list of string as list,stringbuffer as curr)
+if root isword as boolean means{
+    add curr string to the list
+}
+
+if root of employee is null or empty{
+return
+}
+
+for each loop for searchData child iterate until the last the last employee value
+suggestHelper with child , list,curr.append(child.c)
+curr.length()-1 that should be store in curr.setlength
+
+
+create a list of string as suggest with String prefix as input
+create a new arraylist as list 
+all the root values store in last node
+create a string buffer as curr 
+for each loop and iterate through char c to prefix.toCharArray
+ then getting employee.get(c) should be store in last node
+if the last node is null 
+return the list 
+and curr.append(c)
+
+call method suggestHelper with (lastnode,list curr)
+return the list
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   
+
